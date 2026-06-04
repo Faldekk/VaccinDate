@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Vaccindate"
         Height="720"
-        Width="900"
+        Width="960"
         MinHeight="650"
-        MinWidth="800"
+        MinWidth="850"
+        ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Background="#F4F7FB">
 
@@ -31,30 +32,47 @@
         </Style>
 
         <Style TargetType="DatePicker">
-            <Setter Property="FontSize" Value="15"/>
-            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="38"/>
             <Setter Property="Padding" Value="8"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Padding" Value="8 4"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#CBD5E1"/>
         </Style>
 
     </Window.Resources>
 
-    <Grid Margin="20">
+    <Grid>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
+        <!-- TOP MENU -->
+        <Menu Grid.Row="0"
+      Background="White"
+      BorderBrush="#E2E8F0"
+      BorderThickness="0 0 0 10"
+      Padding="4">
 
+            <MenuItem Header="About"
+              Click="AboutMenuItem_Click"
+                      FontSize="10"/>
+        </Menu>
         <!-- HEADER -->
-        <Border Grid.Row="0"
+        <Border Grid.Row="1"
                 Background="#1E293B"
                 CornerRadius="16"
-                Padding="20"
-                Margin="0 0 0 14">
+                Padding="18"
+                Margin="10 0 10 14">
 
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -79,7 +97,7 @@
                         CornerRadius="10"
                         Padding="14 8"
                         VerticalAlignment="Center">
-                    <TextBlock Text="WPF / C#"
+                    <TextBlock Text="Prototype"
                                Foreground="White"
                                FontSize="13"
                                FontWeight="SemiBold"/>
@@ -87,85 +105,90 @@
             </Grid>
         </Border>
 
-        <!-- INPUT CARD -->
-        <Border Grid.Row="1"
-                Background="White"
-                CornerRadius="16"
-                Padding="20"
-                BorderBrush="#E2E8F0"
-                BorderThickness="1"
-                Margin="0 0 0 14">
+        <!-- INPUT -->
+        <!-- INPUT -->
+        <Border Grid.Row="2"
+        Background="White"
+        CornerRadius="16"
+        Padding="18"
+        BorderBrush="#E2E8F0"
+        BorderThickness="1"
+        Margin="10 0 10 14">
 
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="300"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="320"/>
+                    <ColumnDefinition Width="348"/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <!-- LEFT DESCRIPTION -->
+                <!-- DATE -->
                 <StackPanel Grid.Column="0"
-                            VerticalAlignment="Center"
-                            Margin="0 0 20 0">
+                    VerticalAlignment="Center"
+                    Margin="0,0,20,0" Height="75">
 
-                    <TextBlock Text="Wybierz datę urodzenia"
-                               FontSize="18"
-                               FontWeight="Bold"
-                               Foreground="#1E293B"/>
-
-                    <TextBlock Text="Aplikacja wypisze szczepienia, które osoba powinna już mieć oraz szczepienia przyszłe."
-                               FontSize="13"
-                               Foreground="#64748B"
-                               TextWrapping="Wrap"
-                               Margin="0 6 0 0"/>
+                    <TextBlock Text="Data urodzenia"
+                       HorizontalAlignment="Center"
+                       FontSize="13"
+                       FontWeight="SemiBold"
+                       Foreground="#334155"
+                       Margin="0 0 0 8"/>
+                    <DatePicker x:Name="BirthDatePicker"
+                        Width="280"
+                        Height="50"
+                        FontSize="16"/>
                 </StackPanel>
 
-                <!-- DATE BOX ON RIGHT -->
-                <Border Grid.Column="1"
-                        Background="#F8FAFC"
-                        BorderBrush="#CBD5E1"
-                        BorderThickness="1"
-                        CornerRadius="12"
-                        Padding="14"
-                        HorizontalAlignment="Stretch"
-                        VerticalAlignment="Center">
+                <!-- FILTER -->
+                <StackPanel Grid.Column="1"
+                    VerticalAlignment="Center"
+                    Margin="0,0,20,0" Height="57">
 
-                    <StackPanel HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
+                    <TextBlock Text="Filtr szczepień"
+                       FontSize="13"
+                       FontWeight="SemiBold"
+                       Foreground="#334155"
+                       HorizontalAlignment="Center"
+                       Margin="0 0 0 8"/>
 
-                        <TextBlock Text="Data urodzenia"
-                                   FontSize="13"
-                                   FontWeight="SemiBold"
-                                   Foreground="#334155"
-                                   HorizontalAlignment="Center"
-                                   Margin="0 0 0 8"/>
+                    <ComboBox x:Name="VaccineFilterComboBox"
+                      Width="224"
+                      Height="31"
+                      FontSize="15"
+                      SelectedIndex="0">
+                        <ComboBoxItem Content="Wszystkie"/>
+                        <ComboBoxItem Content="Dzieci i młodzież"/>
+                        <ComboBoxItem Content="Dorośli"/>
+                        <ComboBoxItem Content="Cykliczne"/>
+                        <ComboBoxItem Content="Sezonowe"/>
+                        <ComboBoxItem Content="Obowiązkowe PL"/>
+                    </ComboBox>
+                </StackPanel>
 
-                        <DatePicker x:Name="BirthDatePicker"
-                                    Width="220" Height="49"/>
-                    </StackPanel>
-                </Border>
+                <!-- BUTTONS -->
+                <!-- BUTTONS -->
+                <StackPanel Grid.Column="2"
+            VerticalAlignment="Center" Height="95">
 
-                <Button Grid.Column="2"
-                        Content="Pokaż szczepienia"
-                        Click="CheckVaccinationButton_Click"
-                        Margin="16 0 0 0"
-                        Width="170"
-                        VerticalAlignment="Center"/>
+                    <Button Content="Pokaż"
+            Click="CheckVaccinationButton_Click"
+            Width="140"
+            Margin="0 0 0 15"/>
 
-                <Button Grid.Column="3"
-                        Content="Wyczyść"
-                        Click="ClearButton_Click"
-                        Margin="10 0 0 0"
-                        Width="105"
-                        Background="#64748B"
-                        VerticalAlignment="Center"/>
+                    <Button Content="Wyczyść"
+            Click="ClearButton_Click"
+            Width="140"
+            Background="#64748B"/>
+                </StackPanel>
             </Grid>
         </Border>
 
-        <!-- RESULTS CARD -->
-        <!-- RESULTS CARD -->
-        <Grid Grid.Row="2">
+
+
+        <!-- RESULTS -->
+
+        <Grid Grid.Row="3"
+             Margin="10 0 10 14">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -173,11 +196,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- PAST / ALREADY DUE -->
+            <!-- PAST -->
             <Border Grid.Column="0"
             Background="White"
             CornerRadius="16"
-            Padding="0"
             BorderBrush="#E2E8F0"
             BorderThickness="1">
 
@@ -217,7 +239,6 @@
                      BorderThickness="0"
                      FontFamily="Consolas"
                      FontSize="13"
-                     Background="White"
                      Padding="16"
                      Text="Tutaj pojawią się szczepienia, które osoba powinna już mieć."/>
                 </Grid>
@@ -227,7 +248,6 @@
             <Border Grid.Column="2"
             Background="White"
             CornerRadius="16"
-            Padding="0"
             BorderBrush="#E2E8F0"
             BorderThickness="1">
 
@@ -267,7 +287,6 @@
                      BorderThickness="0"
                      FontFamily="Consolas"
                      FontSize="13"
-                     Background="White"
                      Padding="16"
                      Text="Tutaj pojawią się przyszłe szczepienia."/>
                 </Grid>
@@ -275,20 +294,24 @@
 
         </Grid>
 
-        <!-- FOOTER WARNING -->
-        <Border Grid.Row="3"
-                Background="#FEF3C7"
-                BorderBrush="#F59E0B"
-                BorderThickness="1"
-                CornerRadius="12"
-                Padding="10"
-                Margin="0 12 0 0">
+
+        <!-- FOOTER -->
+        <!-- FOOTER -->
+        <Border Grid.Row="4"
+        Background="#FEF3C7"
+        BorderBrush="#F59E0B"
+        BorderThickness="1"
+        CornerRadius="12"
+        Padding="10"
+        VerticalAlignment="Stretch"
+         Margin="10 0 10 5">
 
             <TextBlock TextWrapping="Wrap"
-                       Foreground="#78350F"
-                       FontSize="12">
-                <Run Text="Uwaga: " FontWeight="Bold"/>
-                <Run Text="aplikacja pokazuje orientacyjny harmonogram szczepień na podstawie daty urodzenia. Nie potwierdza wykonania szczepienia i nie zastępuje konsultacji medycznej."/>
+               Foreground="#78350F"
+               FontSize="12"
+               VerticalAlignment="Center">
+        <Run Text="Uwaga: " FontWeight="Bold"/>
+        <Run Text="aplikacja pokazuje orientacyjny harmonogram szczepień. Nie potwierdza wykonania szczepienia i nie zastępuje konsultacji medycznej."/>
             </TextBlock>
         </Border>
 

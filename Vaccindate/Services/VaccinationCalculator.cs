@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using Vaccindate.Models;
 
 namespace Vaccindate.Services
 {
@@ -17,8 +18,6 @@ namespace Vaccindate.Services
 
         public VaccinationSummary GetVaccinationSummary(DateTime birthDate)
         {
-            int ageInDays = (DateTime.Today - birthDate.Date).Days;
-
             var allResults = _schedule
                 .Select(item => CreateResult(birthDate, item))
                 .Where(result => result != null)
@@ -43,12 +42,14 @@ namespace Vaccindate.Services
 
         private List<VaccinationItem> LoadScheduleFromJson()
         {
-            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "vaccines.json");
+            string filePath = Path.Combine(
+                AppDomain.CurrentDomain.BaseDirectory,
+                "vaccines.json");
 
             if (!File.Exists(filePath))
             {
                 throw new FileNotFoundException(
-                    "Nie znaleziono pliku vaccination_schedule.json. Upewnij się, że plik jest dodany do projektu i ma ustawione Copy to Output Directory.",
+                    "Nie znaleziono pliku vaccines.json. Dodaj go do projektu i ustaw Copy to Output Directory: Copy if newer.",
                     filePath);
             }
 
@@ -61,12 +62,18 @@ namespace Vaccindate.Services
                     PropertyNameCaseInsensitive = true
                 });
 
-            if (root == null || root.Items == null)
-            {
+            if (root == null)
                 return new List<VaccinationItem>();
-            }
 
-            return root.Items;
+            var combined = new List<VaccinationItem>();
+
+            if (root.Items != null)
+                combined.AddRange(root.Items);
+
+            if (root.AdultScheduleItems != null)
+                combined.AddRange(root.AdultScheduleItems);
+
+            return combined;
         }
 
         private VaccinationResult? CreateResult(DateTime birthDate, VaccinationItem item)
@@ -80,12 +87,15 @@ namespace Vaccindate.Services
             {
                 VaccineName = item.VaccineName ?? "Nieznana szczepionka",
                 Disease = item.Disease ?? "",
-                Category = item.Category ?? "",
+                Category = item.Category ?? string.Join(", ", item.TargetProfiles ?? new List<string>()),
                 PlannedDate = plannedDate.Value,
                 DaysDifference = (plannedDate.Value.Date - DateTime.Today).Days,
                 Description = item.Description ?? "",
                 ScheduleType = item.ScheduleType ?? "",
-                AgeLabel = item.AgeLabel ?? ""
+                AgeLabel = BuildAgeLabel(item),
+                RecommendedTiming = item.RecommendedTiming ?? "",
+                IsSeasonal = item.IsSeasonal ?? false,
+                IsRequiredInPL = item.IsRequiredInPL ?? false
             };
         }
 
@@ -93,43 +103,41 @@ namespace Vaccindate.Services
         {
             DateTime today = DateTime.Today;
 
-            if (item.ScheduleType == "age_based" && item.AgeInDays.HasValue)
+            if (item.ScheduleType == "age_based")
             {
-                return birthDate.Date.AddDays(item.AgeInDays.Value);
+                if (item.AgeInDays.HasValue)
+                    return birthDate.Date.AddDays(item.AgeInDays.Value);
+
+                if (item.MinimumAgeInYears.HasValue)
+                    return birthDate.Date.AddYears(item.MinimumAgeInYears.Value);
+
+                return null;
             }
 
-            if (item.ScheduleType == "age_based" && item.MinimumAgeInYears.HasValue)
+            if (item.ScheduleType == "age_range")
             {
-                return birthDate.Date.AddYears(item.MinimumAgeInYears.Value);
-            }
-
-            if (item.ScheduleType == "age_range" && item.MinimumAgeInYears.HasValue)
-            {
-                DateTime startDate = birthDate.Date.AddYears(item.MinimumAgeInYears.Value);
-                DateTime? endDate = item.MaximumAgeInYears.HasValue
-                    ? birthDate.Date.AddYears(item.MaximumAgeInYears.Value)
-                    : null;
-
-                if (endDate.HasValue && today > endDate.Value)
+                if (!item.MinimumAgeInYears.HasValue)
                     return null;
 
-                if (today <= startDate)
-                    return startDate;
+                DateTime startDate = birthDate.Date.AddYears(item.MinimumAgeInYears.Value);
 
-                return today;
+                if (item.MaximumAgeInYears.HasValue)
+                {
+                    DateTime endDate = birthDate.Date.AddYears(item.MaximumAgeInYears.Value);
+
+                    if (today > endDate)
+                        return null;
+                }
+
+                return today <= startDate ? startDate : today;
             }
 
-            if (item.ScheduleType == "recurring"
-                && item.MinimumAgeInYears.HasValue
-                && item.RecurrenceYears.HasValue
-                && item.RecurrenceYears.Value > 0)
+            if (item.ScheduleType == "recurring")
             {
-                DateTime firstDate = birthDate.Date.AddYears(item.MinimumAgeInYears.Value);
+                if (!item.MinimumAgeInYears.HasValue || !item.RecurrenceYears.HasValue)
+                    return null;
 
-                if (today <= firstDate)
-                    return firstDate;
-
-                DateTime nextDate = firstDate;
+                DateTime nextDate = birthDate.Date.AddYears(item.MinimumAgeInYears.Value);
 
                 while (nextDate < today)
                 {
@@ -139,55 +147,41 @@ namespace Vaccindate.Services
                 return nextDate;
             }
 
+            if (item.ScheduleType == "conditional")
+            {
+                if (item.MinimumAgeInYears.HasValue)
+                    return birthDate.Date.AddYears(item.MinimumAgeInYears.Value);
+
+                return today;
+            }
+
             return null;
         }
-    }
 
-    public class VaccinationScheduleRoot
-    {
-        public string? SchemaVersion { get; set; }
-        public string? SourceProfile { get; set; }
-        public string? MedicalDisclaimer { get; set; }
-        public List<VaccinationItem>? Items { get; set; }
-    }
+        private string BuildAgeLabel(VaccinationItem item)
+        {
+            if (!string.IsNullOrWhiteSpace(item.AgeLabel))
+                return item.AgeLabel;
 
-    public class VaccinationItem
-    {
-        public string? Id { get; set; }
-        public string? Country { get; set; }
-        public string? VaccineName { get; set; }
-        public string? Disease { get; set; }
-        public string? Category { get; set; }
-        public string? ScheduleType { get; set; }
+            if (item.ScheduleType == "age_based")
+            {
+                if (item.AgeInDays.HasValue)
+                    return $"{item.AgeInDays.Value} dni od urodzenia";
 
-        public int? AgeInDays { get; set; }
-        public string? AgeLabel { get; set; }
+                if (item.MinimumAgeInYears.HasValue)
+                    return $"od {item.MinimumAgeInYears.Value}. r.ż.";
+            }
 
-        public int? MinimumAgeInYears { get; set; }
-        public int? MaximumAgeInYears { get; set; }
+            if (item.ScheduleType == "age_range")
+                return $"{item.MinimumAgeInYears}–{item.MaximumAgeInYears} lat";
 
-        public int? RecurrenceYears { get; set; }
-        public bool? IsSeasonal { get; set; }
-        public bool? IsRequiredInPL { get; set; }
+            if (item.ScheduleType == "recurring")
+                return $"od {item.MinimumAgeInYears}. r.ż., co {item.RecurrenceYears} lat";
 
-        public string? Description { get; set; }
-    }
+            if (item.ScheduleType == "conditional")
+                return "jeśli są wskazania";
 
-    public class VaccinationResult
-    {
-        public string VaccineName { get; set; } = "";
-        public string Disease { get; set; } = "";
-        public string Category { get; set; } = "";
-        public DateTime PlannedDate { get; set; }
-        public int DaysDifference { get; set; }
-        public string Description { get; set; } = "";
-        public string ScheduleType { get; set; } = "";
-        public string AgeLabel { get; set; } = "";
-    }
-
-    public class VaccinationSummary
-    {
-        public List<VaccinationResult> AlreadyDueVaccinations { get; set; } = new();
-        public List<VaccinationResult> FutureVaccinations { get; set; } = new();
+            return "";
+        }
     }
 }

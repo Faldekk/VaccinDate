@@ -1,232 +1,1745 @@
 ﻿{
-  "schemaVersion": "1.0",
-  "sourceProfile": "PL_2026_CHILDREN_PLUS_ADULT_BASE_RECOMMENDATIONS",
-  "medicalDisclaimer": "Orientacyjny harmonogram do aplikacji edukacyjnej. Nie potwierdza wykonania szczepienia i nie zastępuje kwalifikacji lekarskiej ani lokalnego programu szczepień.",
+  "schemaVersion": "2.0",
+  "title": "Vaccindate merged vaccine schedule: children, adolescents and adults",
+  "language": "pl",
+  "sourceDocuments": [
+    "vaccination_schedule.json",
+    "Szczepienie.docx"
+  ],
+  "medicalDisclaimer": "Orientacyjny harmonogram do aplikacji edukacyjnej. Nie potwierdza wykonania szczepienia i nie zastępuje kwalifikacji lekarskiej, historii szczepień ani lokalnych zaleceń medycznych.",
   "items": [
     {
       "id": "pl_bcg_birth",
-      "country": "PL",
       "vaccineName": "BCG — gruźlica",
       "disease": "Gruźlica",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dzieci",
+      "country": "PL",
       "scheduleType": "age_based",
       "ageInDays": 0,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
       "ageLabel": "po urodzeniu",
-      "isRequiredInPL": true,
-      "description": "Szczepienie po urodzeniu według polskiego programu szczepień."
+      "recommendedTiming": "po urodzeniu",
+      "description": "Szczepienie po urodzeniu według polskiego programu szczepień.",
+      "isRequiredInPL": true
     },
     {
       "id": "pl_hbv_birth",
-      "country": "PL",
       "vaccineName": "WZW typu B — dawka 1",
       "disease": "Wirusowe zapalenie wątroby typu B",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dzieci",
+      "country": "PL",
       "scheduleType": "age_based",
       "ageInDays": 0,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
       "ageLabel": "po urodzeniu",
-      "isRequiredInPL": true,
-      "description": "Pierwsza dawka szczepienia przeciw WZW typu B po urodzeniu."
+      "recommendedTiming": "po urodzeniu",
+      "description": "Pierwsza dawka szczepienia przeciw WZW typu B po urodzeniu.",
+      "isRequiredInPL": true
     },
     {
       "id": "pl_6_weeks_combo",
-      "country": "PL",
       "vaccineName": "DTP + Hib + IPV + pneumokoki + WZW B + rotawirusy",
       "disease": "Błonica, tężec, krztusiec, Hib, polio, pneumokoki, WZW B, rotawirusy",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dzieci",
+      "country": "PL",
       "scheduleType": "age_based",
       "ageInDays": 42,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
       "ageLabel": "6. tydzień życia",
-      "isRequiredInPL": true,
-      "description": "Pakiet szczepień niemowlęcych około 6. tygodnia życia."
+      "recommendedTiming": "6. tydzień życia",
+      "description": "Pakiet szczepień niemowlęcych około 6. tygodnia życia.",
+      "isRequiredInPL": true
     },
     {
       "id": "pl_3_4_month_combo",
-      "country": "PL",
       "vaccineName": "DTP + Hib + IPV + pneumokoki + rotawirusy",
       "disease": "Błonica, tężec, krztusiec, Hib, polio, pneumokoki, rotawirusy",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dzieci",
+      "country": "PL",
       "scheduleType": "age_based",
       "ageInDays": 91,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
       "ageLabel": "3.–4. miesiąc życia",
-      "isRequiredInPL": true,
-      "description": "Kolejny etap szczepień niemowlęcych około 3.–4. miesiąca życia."
+      "recommendedTiming": "3.–4. miesiąc życia",
+      "description": "Kolejny etap szczepień niemowlęcych około 3.–4. miesiąca życia.",
+      "isRequiredInPL": true
     },
     {
       "id": "pl_5_6_month_combo",
-      "country": "PL",
       "vaccineName": "DTP + Hib + IPV + rotawirusy",
       "disease": "Błonica, tężec, krztusiec, Hib, polio, rotawirusy",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dzieci",
+      "country": "PL",
       "scheduleType": "age_based",
       "ageInDays": 154,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
       "ageLabel": "5.–6. miesiąc życia",
-      "isRequiredInPL": true,
-      "description": "Kolejny etap szczepień niemowlęcych około 5.–6. miesiąca życia."
+      "recommendedTiming": "5.–6. miesiąc życia",
+      "description": "Kolejny etap szczepień niemowlęcych około 5.–6. miesiąca życia.",
+      "isRequiredInPL": true
     },
     {
       "id": "pl_7_month_hbv",
-      "country": "PL",
       "vaccineName": "WZW typu B — dawka kolejna",
       "disease": "Wirusowe zapalenie wątroby typu B",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dzieci",
+      "country": "PL",
       "scheduleType": "age_based",
       "ageInDays": 210,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
       "ageLabel": "7. miesiąc życia",
-      "isRequiredInPL": true,
-      "description": "Kolejna dawka szczepienia przeciw WZW typu B."
+      "recommendedTiming": "7. miesiąc życia",
+      "description": "Kolejna dawka szczepienia przeciw WZW typu B.",
+      "isRequiredInPL": true
     },
     {
       "id": "pl_12_15_month_mmr_pneumo",
-      "country": "PL",
       "vaccineName": "MMR + pneumokoki",
       "disease": "Odra, świnka, różyczka, pneumokoki",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dzieci",
+      "country": "PL",
       "scheduleType": "age_based",
       "ageInDays": 365,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
       "ageLabel": "12.–15. miesiąc życia",
-      "isRequiredInPL": true,
-      "description": "Szczepienie przeciw odrze, śwince i różyczce oraz dawka przeciw pneumokokom."
+      "recommendedTiming": "12.–15. miesiąc życia",
+      "description": "Szczepienie przeciw odrze, śwince i różyczce oraz dawka przeciw pneumokokom.",
+      "isRequiredInPL": true
     },
     {
       "id": "pl_16_18_month_combo",
-      "country": "PL",
       "vaccineName": "DTP + Hib + IPV",
       "disease": "Błonica, tężec, krztusiec, Hib, polio",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dzieci",
+      "country": "PL",
       "scheduleType": "age_based",
       "ageInDays": 540,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
       "ageLabel": "16.–18. miesiąc życia",
-      "isRequiredInPL": true,
-      "description": "Dawki przypominające w drugim roku życia."
+      "recommendedTiming": "16.–18. miesiąc życia",
+      "description": "Dawki przypominające w drugim roku życia.",
+      "isRequiredInPL": true
     },
     {
       "id": "pl_6_year_dtap_ipv",
-      "country": "PL",
       "vaccineName": "DTP + IPV",
       "disease": "Błonica, tężec, krztusiec, polio",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dzieci",
+      "country": "PL",
       "scheduleType": "age_based",
       "ageInDays": 2190,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
       "ageLabel": "6. rok życia",
-      "isRequiredInPL": true,
-      "description": "Dawka przypominająca około 6. roku życia."
+      "recommendedTiming": "6. rok życia",
+      "description": "Dawka przypominająca około 6. roku życia.",
+      "isRequiredInPL": true
     },
     {
       "id": "pl_12_year_hpv",
-      "country": "PL",
       "vaccineName": "HPV",
       "disease": "Wirus brodawczaka ludzkiego",
+      "targetProfiles": [
+        "child",
+        "adolescent"
+      ],
       "category": "dzieci / młodzież",
+      "country": "PL",
       "scheduleType": "age_based",
       "ageInDays": 4380,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
       "ageLabel": "12. rok życia",
-      "isRequiredInPL": false,
-      "description": "Szczepienie przeciw HPV w wieku nastoletnim; status finansowania i szczegółowy schemat zależą od aktualnego programu."
+      "recommendedTiming": "12. rok życia",
+      "description": "Szczepienie przeciw HPV w wieku nastoletnim; status finansowania i szczegółowy schemat zależą od aktualnego programu.",
+      "isRequiredInPL": false
     },
     {
       "id": "pl_14_year_tdap",
-      "country": "PL",
       "vaccineName": "Tdap / dTap",
       "disease": "Błonica, tężec, krztusiec",
+      "targetProfiles": [
+        "child",
+        "adolescent"
+      ],
       "category": "młodzież",
+      "country": "PL",
       "scheduleType": "age_based",
       "ageInDays": 5110,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
       "ageLabel": "14. rok życia",
-      "isRequiredInPL": true,
-      "description": "Dawka przypominająca przeciw błonicy, tężcowi i krztuścowi."
+      "recommendedTiming": "14. rok życia",
+      "description": "Dawka przypominająca przeciw błonicy, tężcowi i krztuścowi.",
+      "isRequiredInPL": true
     },
     {
       "id": "pl_19_year_td",
-      "country": "PL",
       "vaccineName": "Td",
       "disease": "Błonica, tężec",
+      "targetProfiles": [
+        "child",
+        "adolescent"
+      ],
       "category": "młodzież / dorośli",
+      "country": "PL",
       "scheduleType": "age_based",
       "ageInDays": 6935,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
       "ageLabel": "19. rok życia",
-      "isRequiredInPL": true,
-      "description": "Dawka przypominająca przeciw błonicy i tężcowi."
+      "recommendedTiming": "19. rok życia",
+      "description": "Dawka przypominająca przeciw błonicy i tężcowi.",
+      "isRequiredInPL": true
     },
     {
       "id": "adult_influenza_yearly",
-      "country": "WORLD_BASE",
       "vaccineName": "Grypa",
       "disease": "Grypa sezonowa",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dorośli",
+      "country": "WORLD_BASE",
       "scheduleType": "recurring",
+      "ageInDays": null,
       "minimumAgeInYears": 18,
+      "maximumAgeInYears": null,
       "recurrenceYears": 1,
+      "fixedAgesInYears": null,
       "isSeasonal": true,
-      "description": "Szczepienie coroczne; szczególnie istotne u osób starszych, przewlekle chorych, kobiet w ciąży i personelu medycznego."
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Szczepienie coroczne; szczególnie istotne u osób starszych, przewlekle chorych, kobiet w ciąży i personelu medycznego.",
+      "isRequiredInPL": null
     },
     {
       "id": "adult_covid_current",
-      "country": "WORLD_BASE",
       "vaccineName": "COVID-19",
       "disease": "COVID-19",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dorośli",
+      "country": "WORLD_BASE",
       "scheduleType": "recurring",
+      "ageInDays": null,
       "minimumAgeInYears": 18,
+      "maximumAgeInYears": null,
       "recurrenceYears": 1,
+      "fixedAgesInYears": null,
       "isSeasonal": true,
-      "description": "Dawka zgodnie z aktualnymi zaleceniami sezonowymi i indywidualnym ryzykiem."
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Dawka zgodnie z aktualnymi zaleceniami sezonowymi i indywidualnym ryzykiem.",
+      "isRequiredInPL": null
     },
     {
       "id": "adult_tdap_td_10y",
-      "country": "WORLD_BASE",
       "vaccineName": "Td/Tdap",
       "disease": "Tężec, błonica, krztusiec",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dorośli",
+      "country": "WORLD_BASE",
       "scheduleType": "recurring",
+      "ageInDays": null,
       "minimumAgeInYears": 19,
+      "maximumAgeInYears": null,
       "recurrenceYears": 10,
+      "fixedAgesInYears": null,
       "isSeasonal": false,
-      "description": "Dawka przypominająca przeciw tężcowi i błonicy, z uwzględnieniem krztuśca, zwykle co 10 lat. Tdap jest też zalecany w każdej ciąży."
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Dawka przypominająca przeciw tężcowi i błonicy, z uwzględnieniem krztuśca, zwykle co 10 lat. Tdap jest też zalecany w każdej ciąży.",
+      "isRequiredInPL": null
     },
     {
       "id": "adult_hpv_catchup",
-      "country": "WORLD_BASE",
       "vaccineName": "HPV",
       "disease": "Wirus brodawczaka ludzkiego",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dorośli",
+      "country": "WORLD_BASE",
       "scheduleType": "age_range",
+      "ageInDays": null,
       "minimumAgeInYears": 19,
       "maximumAgeInYears": 26,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
       "isSeasonal": false,
-      "description": "Szczepienie uzupełniające, jeśli osoba nie była wcześniej zaszczepiona; decyzje u starszych dorosłych zależą od kraju i wskazań."
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Szczepienie uzupełniające, jeśli osoba nie była wcześniej zaszczepiona; decyzje u starszych dorosłych zależą od kraju i wskazań.",
+      "isRequiredInPL": null
     },
     {
       "id": "adult_zoster_50",
-      "country": "WORLD_BASE",
       "vaccineName": "Półpasiec / herpes zoster",
       "disease": "Półpasiec",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dorośli",
+      "country": "WORLD_BASE",
       "scheduleType": "age_based",
+      "ageInDays": null,
       "minimumAgeInYears": 50,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
       "isSeasonal": false,
-      "description": "Szczepienie zalecane u starszych dorosłych; dokładny wiek i schemat zależą od kraju oraz preparatu."
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Szczepienie zalecane u starszych dorosłych; dokładny wiek i schemat zależą od kraju oraz preparatu.",
+      "isRequiredInPL": null
     },
     {
       "id": "adult_pneumococcal_65",
-      "country": "WORLD_BASE",
       "vaccineName": "Pneumokoki",
       "disease": "Zakażenia pneumokokowe",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dorośli",
+      "country": "WORLD_BASE",
       "scheduleType": "age_based",
+      "ageInDays": null,
       "minimumAgeInYears": 65,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
       "isSeasonal": false,
-      "description": "Szczepienie przeciw pneumokokom zalecane u osób starszych oraz wcześniej u osób z grup ryzyka."
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Szczepienie przeciw pneumokokom zalecane u osób starszych oraz wcześniej u osób z grup ryzyka.",
+      "isRequiredInPL": null
     },
     {
       "id": "adult_rsv_75",
-      "country": "WORLD_BASE",
       "vaccineName": "RSV",
       "disease": "Wirus RSV",
+      "targetProfiles": [
+        "child"
+      ],
       "category": "dorośli",
+      "country": "WORLD_BASE",
       "scheduleType": "age_based",
+      "ageInDays": null,
       "minimumAgeInYears": 75,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
       "isSeasonal": false,
-      "description": "Szczepienie zalecane u osób starszych; w części zaleceń także wcześniej przy zwiększonym ryzyku."
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Szczepienie zalecane u osób starszych; w części zaleceń także wcześniej przy zwiększonym ryzyku.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_influenza_yearly",
+      "vaccineName": "Grypa",
+      "disease": "Grypa sezonowa",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "recurring",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": 1,
+      "fixedAgesInYears": null,
+      "isSeasonal": true,
+      "doseCount": 1,
+      "ageLabel": null,
+      "recommendedTiming": "co roku, najlepiej przed sezonem infekcyjnym",
+      "description": "1 dawka co roku. Szczególnie ważne u osób starszych, przewlekle chorych i pacjentów onkologicznych.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_covid_current",
+      "vaccineName": "COVID-19",
+      "disease": "COVID-19",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "current_guidelines",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": true,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": "zgodnie z aktualnymi zaleceniami sezonowymi",
+      "description": "Szczepienie zgodnie z aktualnymi zaleceniami. U osób z obniżoną odpornością mogą być potrzebne dodatkowe dawki.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_tdap_td_10_years",
+      "vaccineName": "Tdap / Td",
+      "disease": "Błonica, tężec, krztusiec",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "recurring_fixed_ages",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": 10,
+      "fixedAgesInYears": [
+        19,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79,
+        89,
+        99
+      ],
+      "isSeasonal": false,
+      "doseCount": 1,
+      "ageLabel": null,
+      "recommendedTiming": "co 10 lat",
+      "description": "Dawka przypominająca co 10 lat. Praktycznie Tdap przynajmniej raz w dorosłości, potem Td/Tdap zależnie od dostępności.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_hbv_catchup",
+      "vaccineName": "WZW B",
+      "disease": "Wirusowe zapalenie wątroby typu B",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "catch_up_if_missing",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": 3,
+      "ageLabel": null,
+      "recommendedTiming": "jeśli brak pełnego szczepienia lub dokumentacji",
+      "description": "Uzupełnić przy braku szczepienia lub dokumentacji. Szczególnie istotne przy cukrzycy, zabiegach, transfuzjach, immunosupresji lub leczeniu onkologicznym.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_mmr_if_nonimmune",
+      "vaccineName": "MMR",
+      "disease": "Odra, świnka, różyczka",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "catch_up_if_nonimmune",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": "1–2",
+      "ageLabel": null,
+      "recommendedTiming": "tylko jeśli brak odporności lub dokumentacji",
+      "description": "Uzupełnić, jeśli brak odporności lub dokumentacji. Szczepionki żywe zwykle są przeciwwskazane w ciężkiej immunosupresji.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_varicella_if_nonimmune",
+      "vaccineName": "Ospa wietrzna / VZV",
+      "disease": "Ospa wietrzna",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "catch_up_if_nonimmune",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": 2,
+      "ageLabel": null,
+      "recommendedTiming": "jeśli osoba nie chorowała i nie była szczepiona",
+      "description": "2 dawki u osób nieuodpornionych. Nie stosować przy ciężkiej immunosupresji bez kwalifikacji lekarskiej.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_hpv_19_26",
+      "vaccineName": "HPV",
+      "disease": "Wirus brodawczaka ludzkiego",
+      "targetProfiles": [
+        "healthy_adult"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "age_range",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 26,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": "największy sens do 26. roku życia",
+      "description": "Szczepienie przeciw HPV. Po 26. roku życia decyzja indywidualna.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_hpv_27_45_individual",
+      "vaccineName": "HPV — decyzja indywidualna",
+      "disease": "Wirus brodawczaka ludzkiego",
+      "targetProfiles": [
+        "healthy_adult"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "individual_decision",
+      "ageInDays": null,
+      "minimumAgeInYears": 27,
+      "maximumAgeInYears": 45,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": "po indywidualnej ocenie sensu",
+      "description": "U dorosłych 27–45 lat szczepienie może być rozważone indywidualnie.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_hav_risk_based",
+      "vaccineName": "WZW A",
+      "disease": "Wirusowe zapalenie wątroby typu A",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "risk_based",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": 2,
+      "ageLabel": null,
+      "recommendedTiming": "przy ryzyku ekspozycji, podróżach, chorobach wątroby lub chęci pełniejszej profilaktyki",
+      "description": "2 dawki, szczególnie przy ryzyku ekspozycji, podróżach lub chorobach wątroby.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_tbe_risk_based",
+      "vaccineName": "KZM",
+      "disease": "Kleszczowe zapalenie mózgu",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "risk_based_recurring",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": 3,
+      "ageLabel": null,
+      "recommendedTiming": "tylko przy ryzyku ekspozycji na kleszcze",
+      "description": "3 dawki podstawowe i dawki przypominające co 3–5 lat przy ekspozycji.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_pneumococcal_50_65",
+      "vaccineName": "Pneumokoki",
+      "disease": "Zakażenia pneumokokowe",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "age_or_risk_based",
+      "ageInDays": null,
+      "minimumAgeInYears": 50,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": "od 50. roku życia warto zaplanować; szczególnie ważne ≥65 lat i w grupach ryzyka",
+      "description": "Szczepienie przeciw pneumokokom. U cukrzycy i choroby onkologicznej ma wyższy priorytet.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_zoster_rzv_50",
+      "vaccineName": "Półpasiec RZV",
+      "disease": "Półpasiec / herpes zoster",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "age_based",
+      "ageInDays": null,
+      "minimumAgeInYears": 50,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": 2,
+      "ageLabel": null,
+      "recommendedTiming": "od 50. roku życia",
+      "description": "Rekombinowana szczepionka przeciw półpaścowi: 2 dawki w odstępie 2–6 miesięcy.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_rsv_60",
+      "vaccineName": "RSV",
+      "disease": "Wirus RSV",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "age_or_risk_based",
+      "ageInDays": null,
+      "minimumAgeInYears": 60,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": 1,
+      "ageLabel": null,
+      "recommendedTiming": "od 60. roku życia, szczególnie przy wyższym ryzyku ciężkiego zakażenia",
+      "description": "1 dawka od 60. roku życia; szczególnie istotna u osób starszych i obciążonych.",
+      "isRequiredInPL": null
+    }
+  ],
+  "adultScheduleItems": [
+    {
+      "id": "pl_bcg_birth",
+      "vaccineName": "BCG — gruźlica",
+      "disease": "Gruźlica",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dzieci",
+      "country": "PL",
+      "scheduleType": "age_based",
+      "ageInDays": 0,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": "po urodzeniu",
+      "recommendedTiming": "po urodzeniu",
+      "description": "Szczepienie po urodzeniu według polskiego programu szczepień.",
+      "isRequiredInPL": true
+    },
+    {
+      "id": "pl_hbv_birth",
+      "vaccineName": "WZW typu B — dawka 1",
+      "disease": "Wirusowe zapalenie wątroby typu B",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dzieci",
+      "country": "PL",
+      "scheduleType": "age_based",
+      "ageInDays": 0,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": "po urodzeniu",
+      "recommendedTiming": "po urodzeniu",
+      "description": "Pierwsza dawka szczepienia przeciw WZW typu B po urodzeniu.",
+      "isRequiredInPL": true
+    },
+    {
+      "id": "pl_6_weeks_combo",
+      "vaccineName": "DTP + Hib + IPV + pneumokoki + WZW B + rotawirusy",
+      "disease": "Błonica, tężec, krztusiec, Hib, polio, pneumokoki, WZW B, rotawirusy",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dzieci",
+      "country": "PL",
+      "scheduleType": "age_based",
+      "ageInDays": 42,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": "6. tydzień życia",
+      "recommendedTiming": "6. tydzień życia",
+      "description": "Pakiet szczepień niemowlęcych około 6. tygodnia życia.",
+      "isRequiredInPL": true
+    },
+    {
+      "id": "pl_3_4_month_combo",
+      "vaccineName": "DTP + Hib + IPV + pneumokoki + rotawirusy",
+      "disease": "Błonica, tężec, krztusiec, Hib, polio, pneumokoki, rotawirusy",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dzieci",
+      "country": "PL",
+      "scheduleType": "age_based",
+      "ageInDays": 91,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": "3.–4. miesiąc życia",
+      "recommendedTiming": "3.–4. miesiąc życia",
+      "description": "Kolejny etap szczepień niemowlęcych około 3.–4. miesiąca życia.",
+      "isRequiredInPL": true
+    },
+    {
+      "id": "pl_5_6_month_combo",
+      "vaccineName": "DTP + Hib + IPV + rotawirusy",
+      "disease": "Błonica, tężec, krztusiec, Hib, polio, rotawirusy",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dzieci",
+      "country": "PL",
+      "scheduleType": "age_based",
+      "ageInDays": 154,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": "5.–6. miesiąc życia",
+      "recommendedTiming": "5.–6. miesiąc życia",
+      "description": "Kolejny etap szczepień niemowlęcych około 5.–6. miesiąca życia.",
+      "isRequiredInPL": true
+    },
+    {
+      "id": "pl_7_month_hbv",
+      "vaccineName": "WZW typu B — dawka kolejna",
+      "disease": "Wirusowe zapalenie wątroby typu B",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dzieci",
+      "country": "PL",
+      "scheduleType": "age_based",
+      "ageInDays": 210,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": "7. miesiąc życia",
+      "recommendedTiming": "7. miesiąc życia",
+      "description": "Kolejna dawka szczepienia przeciw WZW typu B.",
+      "isRequiredInPL": true
+    },
+    {
+      "id": "pl_12_15_month_mmr_pneumo",
+      "vaccineName": "MMR + pneumokoki",
+      "disease": "Odra, świnka, różyczka, pneumokoki",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dzieci",
+      "country": "PL",
+      "scheduleType": "age_based",
+      "ageInDays": 365,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": "12.–15. miesiąc życia",
+      "recommendedTiming": "12.–15. miesiąc życia",
+      "description": "Szczepienie przeciw odrze, śwince i różyczce oraz dawka przeciw pneumokokom.",
+      "isRequiredInPL": true
+    },
+    {
+      "id": "pl_16_18_month_combo",
+      "vaccineName": "DTP + Hib + IPV",
+      "disease": "Błonica, tężec, krztusiec, Hib, polio",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dzieci",
+      "country": "PL",
+      "scheduleType": "age_based",
+      "ageInDays": 540,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": "16.–18. miesiąc życia",
+      "recommendedTiming": "16.–18. miesiąc życia",
+      "description": "Dawki przypominające w drugim roku życia.",
+      "isRequiredInPL": true
+    },
+    {
+      "id": "pl_6_year_dtap_ipv",
+      "vaccineName": "DTP + IPV",
+      "disease": "Błonica, tężec, krztusiec, polio",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dzieci",
+      "country": "PL",
+      "scheduleType": "age_based",
+      "ageInDays": 2190,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": "6. rok życia",
+      "recommendedTiming": "6. rok życia",
+      "description": "Dawka przypominająca około 6. roku życia.",
+      "isRequiredInPL": true
+    },
+    {
+      "id": "pl_12_year_hpv",
+      "vaccineName": "HPV",
+      "disease": "Wirus brodawczaka ludzkiego",
+      "targetProfiles": [
+        "child",
+        "adolescent"
+      ],
+      "category": "dzieci / młodzież",
+      "country": "PL",
+      "scheduleType": "age_based",
+      "ageInDays": 4380,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": "12. rok życia",
+      "recommendedTiming": "12. rok życia",
+      "description": "Szczepienie przeciw HPV w wieku nastoletnim; status finansowania i szczegółowy schemat zależą od aktualnego programu.",
+      "isRequiredInPL": false
+    },
+    {
+      "id": "pl_14_year_tdap",
+      "vaccineName": "Tdap / dTap",
+      "disease": "Błonica, tężec, krztusiec",
+      "targetProfiles": [
+        "child",
+        "adolescent"
+      ],
+      "category": "młodzież",
+      "country": "PL",
+      "scheduleType": "age_based",
+      "ageInDays": 5110,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": "14. rok życia",
+      "recommendedTiming": "14. rok życia",
+      "description": "Dawka przypominająca przeciw błonicy, tężcowi i krztuścowi.",
+      "isRequiredInPL": true
+    },
+    {
+      "id": "pl_19_year_td",
+      "vaccineName": "Td",
+      "disease": "Błonica, tężec",
+      "targetProfiles": [
+        "child",
+        "adolescent"
+      ],
+      "category": "młodzież / dorośli",
+      "country": "PL",
+      "scheduleType": "age_based",
+      "ageInDays": 6935,
+      "minimumAgeInYears": null,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": "19. rok życia",
+      "recommendedTiming": "19. rok życia",
+      "description": "Dawka przypominająca przeciw błonicy i tężcowi.",
+      "isRequiredInPL": true
+    },
+    {
+      "id": "adult_influenza_yearly",
+      "vaccineName": "Grypa",
+      "disease": "Grypa sezonowa",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dorośli",
+      "country": "WORLD_BASE",
+      "scheduleType": "recurring",
+      "ageInDays": null,
+      "minimumAgeInYears": 18,
+      "maximumAgeInYears": null,
+      "recurrenceYears": 1,
+      "fixedAgesInYears": null,
+      "isSeasonal": true,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Szczepienie coroczne; szczególnie istotne u osób starszych, przewlekle chorych, kobiet w ciąży i personelu medycznego.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_covid_current",
+      "vaccineName": "COVID-19",
+      "disease": "COVID-19",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dorośli",
+      "country": "WORLD_BASE",
+      "scheduleType": "recurring",
+      "ageInDays": null,
+      "minimumAgeInYears": 18,
+      "maximumAgeInYears": null,
+      "recurrenceYears": 1,
+      "fixedAgesInYears": null,
+      "isSeasonal": true,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Dawka zgodnie z aktualnymi zaleceniami sezonowymi i indywidualnym ryzykiem.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_tdap_td_10y",
+      "vaccineName": "Td/Tdap",
+      "disease": "Tężec, błonica, krztusiec",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dorośli",
+      "country": "WORLD_BASE",
+      "scheduleType": "recurring",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": null,
+      "recurrenceYears": 10,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Dawka przypominająca przeciw tężcowi i błonicy, z uwzględnieniem krztuśca, zwykle co 10 lat. Tdap jest też zalecany w każdej ciąży.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_hpv_catchup",
+      "vaccineName": "HPV",
+      "disease": "Wirus brodawczaka ludzkiego",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dorośli",
+      "country": "WORLD_BASE",
+      "scheduleType": "age_range",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 26,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Szczepienie uzupełniające, jeśli osoba nie była wcześniej zaszczepiona; decyzje u starszych dorosłych zależą od kraju i wskazań.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_zoster_50",
+      "vaccineName": "Półpasiec / herpes zoster",
+      "disease": "Półpasiec",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dorośli",
+      "country": "WORLD_BASE",
+      "scheduleType": "age_based",
+      "ageInDays": null,
+      "minimumAgeInYears": 50,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Szczepienie zalecane u starszych dorosłych; dokładny wiek i schemat zależą od kraju oraz preparatu.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_pneumococcal_65",
+      "vaccineName": "Pneumokoki",
+      "disease": "Zakażenia pneumokokowe",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dorośli",
+      "country": "WORLD_BASE",
+      "scheduleType": "age_based",
+      "ageInDays": null,
+      "minimumAgeInYears": 65,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Szczepienie przeciw pneumokokom zalecane u osób starszych oraz wcześniej u osób z grup ryzyka.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_rsv_75",
+      "vaccineName": "RSV",
+      "disease": "Wirus RSV",
+      "targetProfiles": [
+        "child"
+      ],
+      "category": "dorośli",
+      "country": "WORLD_BASE",
+      "scheduleType": "age_based",
+      "ageInDays": null,
+      "minimumAgeInYears": 75,
+      "maximumAgeInYears": null,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": false,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": null,
+      "description": "Szczepienie zalecane u osób starszych; w części zaleceń także wcześniej przy zwiększonym ryzyku.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_influenza_yearly",
+      "vaccineName": "Grypa",
+      "disease": "Grypa sezonowa",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "recurring",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": 1,
+      "fixedAgesInYears": null,
+      "isSeasonal": true,
+      "doseCount": 1,
+      "ageLabel": null,
+      "recommendedTiming": "co roku, najlepiej przed sezonem infekcyjnym",
+      "description": "1 dawka co roku. Szczególnie ważne u osób starszych, przewlekle chorych i pacjentów onkologicznych.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_covid_current",
+      "vaccineName": "COVID-19",
+      "disease": "COVID-19",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "current_guidelines",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": true,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": "zgodnie z aktualnymi zaleceniami sezonowymi",
+      "description": "Szczepienie zgodnie z aktualnymi zaleceniami. U osób z obniżoną odpornością mogą być potrzebne dodatkowe dawki.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_tdap_td_10_years",
+      "vaccineName": "Tdap / Td",
+      "disease": "Błonica, tężec, krztusiec",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "recurring_fixed_ages",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": 10,
+      "fixedAgesInYears": [
+        19,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79,
+        89,
+        99
+      ],
+      "isSeasonal": false,
+      "doseCount": 1,
+      "ageLabel": null,
+      "recommendedTiming": "co 10 lat",
+      "description": "Dawka przypominająca co 10 lat. Praktycznie Tdap przynajmniej raz w dorosłości, potem Td/Tdap zależnie od dostępności.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_hbv_catchup",
+      "vaccineName": "WZW B",
+      "disease": "Wirusowe zapalenie wątroby typu B",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "catch_up_if_missing",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": 3,
+      "ageLabel": null,
+      "recommendedTiming": "jeśli brak pełnego szczepienia lub dokumentacji",
+      "description": "Uzupełnić przy braku szczepienia lub dokumentacji. Szczególnie istotne przy cukrzycy, zabiegach, transfuzjach, immunosupresji lub leczeniu onkologicznym.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_mmr_if_nonimmune",
+      "vaccineName": "MMR",
+      "disease": "Odra, świnka, różyczka",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "catch_up_if_nonimmune",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": "1–2",
+      "ageLabel": null,
+      "recommendedTiming": "tylko jeśli brak odporności lub dokumentacji",
+      "description": "Uzupełnić, jeśli brak odporności lub dokumentacji. Szczepionki żywe zwykle są przeciwwskazane w ciężkiej immunosupresji.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_varicella_if_nonimmune",
+      "vaccineName": "Ospa wietrzna / VZV",
+      "disease": "Ospa wietrzna",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "catch_up_if_nonimmune",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": 2,
+      "ageLabel": null,
+      "recommendedTiming": "jeśli osoba nie chorowała i nie była szczepiona",
+      "description": "2 dawki u osób nieuodpornionych. Nie stosować przy ciężkiej immunosupresji bez kwalifikacji lekarskiej.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_hpv_19_26",
+      "vaccineName": "HPV",
+      "disease": "Wirus brodawczaka ludzkiego",
+      "targetProfiles": [
+        "healthy_adult"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "age_range",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 26,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": "największy sens do 26. roku życia",
+      "description": "Szczepienie przeciw HPV. Po 26. roku życia decyzja indywidualna.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_hpv_27_45_individual",
+      "vaccineName": "HPV — decyzja indywidualna",
+      "disease": "Wirus brodawczaka ludzkiego",
+      "targetProfiles": [
+        "healthy_adult"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "individual_decision",
+      "ageInDays": null,
+      "minimumAgeInYears": 27,
+      "maximumAgeInYears": 45,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": "po indywidualnej ocenie sensu",
+      "description": "U dorosłych 27–45 lat szczepienie może być rozważone indywidualnie.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_hav_risk_based",
+      "vaccineName": "WZW A",
+      "disease": "Wirusowe zapalenie wątroby typu A",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "risk_based",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": 2,
+      "ageLabel": null,
+      "recommendedTiming": "przy ryzyku ekspozycji, podróżach, chorobach wątroby lub chęci pełniejszej profilaktyki",
+      "description": "2 dawki, szczególnie przy ryzyku ekspozycji, podróżach lub chorobach wątroby.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_tbe_risk_based",
+      "vaccineName": "KZM",
+      "disease": "Kleszczowe zapalenie mózgu",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "risk_based_recurring",
+      "ageInDays": null,
+      "minimumAgeInYears": 19,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": 3,
+      "ageLabel": null,
+      "recommendedTiming": "tylko przy ryzyku ekspozycji na kleszcze",
+      "description": "3 dawki podstawowe i dawki przypominające co 3–5 lat przy ekspozycji.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_pneumococcal_50_65",
+      "vaccineName": "Pneumokoki",
+      "disease": "Zakażenia pneumokokowe",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "age_or_risk_based",
+      "ageInDays": null,
+      "minimumAgeInYears": 50,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": null,
+      "ageLabel": null,
+      "recommendedTiming": "od 50. roku życia warto zaplanować; szczególnie ważne ≥65 lat i w grupach ryzyka",
+      "description": "Szczepienie przeciw pneumokokom. U cukrzycy i choroby onkologicznej ma wyższy priorytet.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_zoster_rzv_50",
+      "vaccineName": "Półpasiec RZV",
+      "disease": "Półpasiec / herpes zoster",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "age_based",
+      "ageInDays": null,
+      "minimumAgeInYears": 50,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": 2,
+      "ageLabel": null,
+      "recommendedTiming": "od 50. roku życia",
+      "description": "Rekombinowana szczepionka przeciw półpaścowi: 2 dawki w odstępie 2–6 miesięcy.",
+      "isRequiredInPL": null
+    },
+    {
+      "id": "adult_rsv_60",
+      "vaccineName": "RSV",
+      "disease": "Wirus RSV",
+      "targetProfiles": [
+        "healthy_adult",
+        "diabetes",
+        "oncology"
+      ],
+      "category": "dorośli",
+      "country": "PL/WORLD_BASE",
+      "scheduleType": "age_or_risk_based",
+      "ageInDays": null,
+      "minimumAgeInYears": 60,
+      "maximumAgeInYears": 100,
+      "recurrenceYears": null,
+      "fixedAgesInYears": null,
+      "isSeasonal": null,
+      "doseCount": 1,
+      "ageLabel": null,
+      "recommendedTiming": "od 60. roku życia, szczególnie przy wyższym ryzyku ciężkiego zakażenia",
+      "description": "1 dawka od 60. roku życia; szczególnie istotna u osób starszych i obciążonych.",
+      "isRequiredInPL": null
+    }
+  ],
+  "ageMilestones": [
+    {
+      "ageRange": "19 lat",
+      "ageFrom": 19,
+      "ageTo": 19,
+      "recommendations": [
+        "Punkt startowy: przegląd dokumentacji.",
+        "Jeśli w 19. roku życia podano dawkę przypominającą przeciw błonicy/tężcowi/krztuścowi, następna za 10 lat.",
+        "Uzupełnić WZW B, MMR, ospę wietrzną i HPV, jeśli brak odporności lub dokumentacji."
+      ]
+    },
+    {
+      "ageRange": "20–26 lat",
+      "ageFrom": 20,
+      "ageTo": 26,
+      "recommendations": [
+        "Co roku grypa.",
+        "COVID-19 według aktualnych zaleceń.",
+        "Dokończyć HPV, WZW B, MMR, VZV i WZW A, jeśli wskazane."
+      ]
+    },
+    {
+      "ageRange": "27–49 lat",
+      "ageFrom": 27,
+      "ageTo": 49,
+      "recommendations": [
+        "Co roku grypa.",
+        "COVID-19 według aktualnych zaleceń.",
+        "Tdap/Td w wieku 29, 39 i 49 lat.",
+        "HPV tylko po indywidualnej ocenie sensu."
+      ]
+    },
+    {
+      "ageRange": "50 lat",
+      "ageFrom": 50,
+      "ageTo": 50,
+      "recommendations": [
+        "Duży punkt kontrolny.",
+        "Półpasiec RZV: 2 dawki.",
+        "Pneumokoki: PCV20 jednorazowo albo schemat PCV + PPSV23 zależnie od preparatu.",
+        "Tdap/Td, jeśli wypada termin."
+      ]
+    },
+    {
+      "ageRange": "51–59 lat",
+      "ageFrom": 51,
+      "ageTo": 59,
+      "recommendations": [
+        "Grypa co roku.",
+        "COVID-19 według zaleceń.",
+        "Tdap/Td w wieku 59 lat.",
+        "Dokończyć półpasiec, jeśli nie wykonano w 50. roku życia."
+      ]
+    },
+    {
+      "ageRange": "60 lat",
+      "ageFrom": 60,
+      "ageTo": 60,
+      "recommendations": [
+        "Rozważyć lub wykonać RSV: 1 dawka.",
+        "Kontynuować grypę co roku.",
+        "COVID-19 według zaleceń."
+      ]
+    },
+    {
+      "ageRange": "65 lat",
+      "ageFrom": 65,
+      "ageTo": 65,
+      "recommendations": [
+        "Ponowna ocena pneumokoków.",
+        "Jeśli nie podano wcześniej — wykonać.",
+        "Jeśli podano starszy schemat — sprawdzić, czy potrzebna dawka uzupełniająca.",
+        "U osób ≥65 lat preferować odpowiedni wariant szczepienia przeciw grypie, jeśli dostępny."
+      ]
+    },
+    {
+      "ageRange": "69, 79, 89, 99 lat",
+      "fixedAges": [
+        69,
+        79,
+        89,
+        99
+      ],
+      "recommendations": [
+        "Tdap/Td co 10 lat."
+      ]
+    },
+    {
+      "ageRange": "60–100 lat",
+      "ageFrom": 60,
+      "ageTo": 100,
+      "recommendations": [
+        "Grypa co roku.",
+        "COVID-19 według aktualnych zaleceń.",
+        "Kontrola pneumokoków.",
+        "RSV, jeśli niewykonane.",
+        "Półpasiec, jeśli niewykonany."
+      ]
+    }
+  ],
+  "recurringVaccinations": [
+    {
+      "vaccineName": "Grypa",
+      "interval": "co roku",
+      "healthyAdultUse": true
+    },
+    {
+      "vaccineName": "COVID-19",
+      "interval": "według aktualnych zaleceń",
+      "healthyAdultUse": true
+    },
+    {
+      "vaccineName": "Tdap/Td",
+      "interval": "co 10 lat",
+      "healthyAdultUse": true
+    },
+    {
+      "vaccineName": "KZM",
+      "interval": "co 3–5 lat",
+      "healthyAdultUse": "tylko przy ekspozycji na kleszcze"
+    },
+    {
+      "vaccineName": "MenACWY",
+      "interval": "boostery co 5 lat tylko w szczególnych grupach ryzyka",
+      "healthyAdultUse": false
+    }
+  ],
+  "riskProfiles": {
+    "healthyAdult": {
+      "label": "Osoba zdrowa",
+      "corePlan": [
+        "Grypa co roku",
+        "COVID-19 według zaleceń",
+        "Tdap/Td co 10 lat",
+        "Uzupełnienie braków szczepień",
+        "Półpasiec od 50 lat",
+        "Pneumokoki od 50–65 lat",
+        "RSV od 60 lat"
+      ]
+    },
+    "diabetes": {
+      "label": "Cukrzyca / choroby metaboliczne",
+      "practicalDifference": "Bardziej intensywne podejście do pneumokoków, grypy, COVID-19 i WZW B.",
+      "minimumPackage": [
+        {
+          "vaccineName": "Grypa",
+          "schedule": "1 dawka co roku"
+        },
+        {
+          "vaccineName": "COVID-19",
+          "schedule": "zgodnie z aktualnymi zaleceniami"
+        },
+        {
+          "vaccineName": "Pneumokoki",
+          "schedule": "PCV13 + PPSV23 po ≥8 tygodniach albo PCV20 jednorazowo"
+        },
+        {
+          "vaccineName": "WZW B",
+          "schedule": "3 dawki, jeśli brak wcześniejszego szczepienia"
+        },
+        {
+          "vaccineName": "Tdap/Td",
+          "schedule": "co 10 lat"
+        },
+        {
+          "vaccineName": "Półpasiec RZV",
+          "schedule": "2 dawki, zwłaszcza ≥50 lat"
+        },
+        {
+          "vaccineName": "RSV",
+          "schedule": "1 dawka ≥60 lat"
+        },
+        {
+          "vaccineName": "VZV / MMR",
+          "schedule": "tylko jeśli brak odporności i brak przeciwwskazań"
+        }
+      ]
+    },
+    "oncology": {
+      "label": "Choroba onkologiczna",
+      "practicalDifference": "Najważniejsze są czas szczepienia i rodzaj szczepionki.",
+      "generalRules": [
+        {
+          "situation": "Przed chemioterapią / immunoterapią / radioterapią",
+          "rule": "Szczepić najlepiej 2–4 tygodnie przed leczeniem."
+        },
+        {
+          "situation": "W trakcie leczenia",
+          "rule": "Szczepionki nieżywe można podawać, choć odpowiedź może być słabsza."
+        },
+        {
+          "situation": "Szczepionki żywe, np. MMR, ospa",
+          "rule": "Zwykle unikać w ciężkiej immunosupresji."
+        },
+        {
+          "situation": "HSCT",
+          "rule": "Pełna rewakcynacja zwykle 6–12 miesięcy po przeszczepieniu; COVID-19, grypa i pneumokoki mogą być od 3 miesięcy po HSCT."
+        },
+        {
+          "situation": "CAR-T",
+          "rule": "Grypa i COVID-19 najwcześniej 3 miesiące po zakończeniu terapii; inne szczepionki nieżywe najwcześniej 6 miesięcy po leczeniu."
+        },
+        {
+          "situation": "Leki anty-CD20 / deplecja limfocytów B",
+          "rule": "Odpowiedź na szczepienia może być słaba; czasem konieczne ponowne szczepienie, np. przeciw COVID-19 po ≥6 miesiącach od zakończenia leczenia."
+        }
+      ]
+    }
+  },
+  "comparisonByVaccine": [
+    {
+      "vaccineName": "Grypa",
+      "healthyAdult": "Co roku.",
+      "diabetes": "Co roku — szczególnie ważne.",
+      "oncology": "Co roku; można podać także w trakcie leczenia, ale najlepiej przed leczeniem, jeśli czas pozwala."
+    },
+    {
+      "vaccineName": "COVID-19",
+      "healthyAdult": "Według aktualnych zaleceń.",
+      "diabetes": "Według aktualnych zaleceń; zwykle niższy próg do szczepienia.",
+      "oncology": "Wysoki priorytet; u pacjentów z upośledzoną odpowiedzią immunologiczną mogą być potrzebne dodatkowe dawki."
+    },
+    {
+      "vaccineName": "Pneumokoki",
+      "healthyAdult": "Najbardziej praktycznie od 50–65 r.ż.",
+      "diabetes": "Wcześniej i bardziej stanowczo; PCV13 + PPSV23 ≥8 tygodni albo PCV20.",
+      "oncology": "Wysoki priorytet, szczególnie przed immunosupresją; po HSCT osobne schematy rewakcynacji."
+    },
+    {
+      "vaccineName": "Półpasiec RZV",
+      "healthyAdult": "Od 50 r.ż., 2 dawki.",
+      "diabetes": "Tak samo, często szczególnie wskazane przy starszym wieku i chorobach przewlekłych.",
+      "oncology": "Często wcześniej lub wyraźniej wskazane przy immunosupresji; stosuje się szczepionkę rekombinowaną, nie żywą."
+    },
+    {
+      "vaccineName": "RSV",
+      "healthyAdult": "Od 60 r.ż., 1 dawka.",
+      "diabetes": "Od 60 r.ż.; choroby przewlekłe zwiększają sens szczepienia.",
+      "oncology": "Często korzystne u osób starszych i obciążonych; decyzja zależy od leczenia i odporności."
+    },
+    {
+      "vaccineName": "WZW B",
+      "healthyAdult": "Uzupełnić, jeśli brak szczepienia.",
+      "diabetes": "Uwzględnić w kalendarzu dla cukrzycy.",
+      "oncology": "Szczególnie istotne przed leczeniem, zabiegami, transfuzjami i immunosupresją."
+    },
+    {
+      "vaccineName": "MMR / ospa wietrzna",
+      "healthyAdult": "Uzupełnić, jeśli brak odporności.",
+      "diabetes": "Uzupełnić, jeśli brak odporności; ospa może dekompensować cukrzycę.",
+      "oncology": "Szczepionki żywe zwykle przeciwwskazane w ciężkiej immunosupresji; najlepiej przed leczeniem, jeśli są potrzebne."
+    },
+    {
+      "vaccineName": "Szczepionki żywe",
+      "healthyAdult": "Możliwe, jeśli brak przeciwwskazań.",
+      "diabetes": "Możliwe, jeśli brak immunosupresji.",
+      "oncology": "Często przeciwwskazane; po HSCT najwcześniej po 2 latach i tylko bez GvHD/immunosupresji."
     }
   ]
 }
